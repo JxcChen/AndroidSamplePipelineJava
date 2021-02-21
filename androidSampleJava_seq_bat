@@ -16,7 +16,7 @@ pipeline{
             steps {
                 bat '''
                     cd AndroidSampleApp
-                    gradlew clean assembleDebug
+                    gradle clean assembleDebug
                 '''
             }
         }
