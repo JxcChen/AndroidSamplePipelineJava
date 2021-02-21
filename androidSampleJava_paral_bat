@@ -8,7 +8,7 @@ pipeline{
             parallel {
                 stage('安卓程序源码') {
                     steps {
-                        bat 'md AndroidSampleApp'
+
                         dir("AndroidSampleApp"){
                             git branch:'master', url:'git@github.com:JxcChen/AndroidSampleApp.git'
                         }
@@ -17,7 +17,7 @@ pipeline{
 
                 stage('自动测试程序源码') {
                     steps {
-                        bat 'md  iAppBVT'
+
                         dir("iAppBVT"){
                             git branch:'master', url:'git@github.com:JxcChen/iAppBVT.git'
                         }
@@ -39,7 +39,7 @@ pipeline{
             parallel {
                 stage('发布测试包') {
                     steps {
-                        archiveArtifacts artifacts: 'AndroidSampleApp/app/build/outputs/apk/debug/app-debug.apk'
+                        archiveArtifacts artifacts: 'AndroidSampleApp\\app\\build\\outputs\\apk\\debug\\app-debug.apk'
                     }
                 }
 
