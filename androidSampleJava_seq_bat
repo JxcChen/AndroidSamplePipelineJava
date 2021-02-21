@@ -28,7 +28,7 @@ pipeline{
                    (adb uninstall com.appsflyer.androidsampleapp) || (echo "can not find com.appsflyer.androidsampleapp")
 
                     #安装安卓app
-                    adb install ..\app_pack\AndroidSampleApp\app\build\outputs\apk\debug\app-debug.apk
+                    adb install ..\\app_pack\\AndroidSampleApp\\app\build\\outputs\\apk\\debug\\app-debug.apk
                 '''
             }
         }
